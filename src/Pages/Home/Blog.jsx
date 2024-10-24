@@ -1,13 +1,19 @@
+import "./Blog.css";
 const Blog = ({ blog }) => {
   return (
-    <>
-      <h1>{blog.source.id}</h1>
-      <h1>{blog.author}</h1>
-      <h1>{blog.title}</h1>
-      <h1>{blog.description}</h1>
-      <h1>{blog.urlToImage}</h1>
-      <h1>{blog.publishedAt}</h1>
-    </>
+    <div className="contenedor">
+      <div className="imagenContenedor">
+        <img src={blog.urlToImage} alt={blog.description} className="imagen" />
+      </div>
+      <div className="datos">
+        <h2 className="titulo">{blog.title}</h2>
+        <div className="subDatos">
+          <h6 className="autor">{blog.author}</h6>
+          <h6 className="fecha">{new Date(blog.publishedAt).toLocaleString("es")}</h6>
+        </div>
+        <p className="descripcion">{blog.description}</p>
+      </div>
+    </div>
   );
 };
 

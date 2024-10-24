@@ -21,7 +21,7 @@ export const newsMock = [
       title: "Tesla delivers Q3 earnings beat as margins improve; shares surge - Yahoo Finance",
       description: "Tesla delivers Q3 earnings beat as margins improve; shares surgeYahoo Finance Tesla shares jump 12% on profit beat as company benefits from environmental creditsCNBC Musk’s Tesla TurnaroundThe Information Tesla stock jumps on Q3 earnings beatYahoo Finance Tes…",
       url: "https://slashdot.org/firehose.pl?op=view&amp;id=175312715",
-      urlToImage: null,
+      urlToImage: "https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2024/10/Robotaxi_82-e1728620096771.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
       publishedAt: "2024-10-24T00:33:19Z",
       content: "The Fine Print: The following comments are owned by whoever posted them. We are not responsible for them in any way."
   },
