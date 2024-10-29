@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Header.css";
+import { useContext } from 'react';
+import { AuthContext } from "../Context/AuthContext";
 
 const links = [
   { to: "/", label: "Inicio" },
@@ -11,7 +13,13 @@ const loggedLinks = [
   { to: "/logout", label: "Cerrar sesión", className: "link-end" },
 ];
 
-const Header = ({ isLogged }) => {
+const logoutLinks = [
+  { to: "/login", label: "Login", className: "link-end" },
+  { to: "/register", label: "register", className: "link-end" },
+];
+
+const Header = () => {
+  const { isLogged } = useContext(AuthContext);
   return (
     <nav className="topnav">
       <div className="start-container">
@@ -28,6 +36,18 @@ const Header = ({ isLogged }) => {
       <div className="link-end-container">
         {isLogged &&
           loggedLinks.map((link) => (
+            <NavLink
+              key={link.to}
+              to={link.to}
+              className={({ isActive }) =>
+                `${link.className} ${isActive ? "active" : ""}`
+              }
+            >
+              {link.label}
+            </NavLink>
+          ))}
+          {!isLogged &&
+          logoutLinks.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
